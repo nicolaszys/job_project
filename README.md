@@ -1,6 +1,6 @@
 # job_project
 
-## 1 ère étape Scrapper le site Indeed
+## 1 ère étape : Scrapper le site Indeed
 
 ** Trois méthodes de scrapping ont été utilisés**
 
@@ -19,9 +19,11 @@
   Ne permet d'avoir **seulement** contenu dans la "preview" de l'annonce
   
   #### b. 2ème méthdoe : cliquer sur l'anonce
-          1.   
-          2.   
-          3.   
+          1. Pour chacune des annonces, cliquer sur le titre --> Ouverture d'une boîte de dialogue latérale
+          2. Récupérer les infos voulues à partir de la boîte de dialogue
+          3. Cliquer sur l'annonce suivante
+          4. Toute les annonces d'une page faite, changer de page
+          5. Refaire étapes 1., 2., 3., 4., jusqu'à plus de nouvelles page
           
   **AVANTAGES**  
     - Meilleure personnalisation : permet d'avoir plus d'informations si besoin  
@@ -29,7 +31,7 @@
     - Plus longue  
     - Plus difficile à mettre en place
 
-## 2 ème étape le pre-processing
+## 2 ème étape : Le pre-processing
 
   ### Notre scrapping
 
@@ -52,8 +54,19 @@ Exemple de liste :
 
 Nous rajoutons la colonne **Resume** qui permet à partir de mot clefs de trouver l'offre la plus proche de nos envies.
 
+Si une anonce n'a aucun de nos mots clefs, le résumé de l'annonce est 'Mauvaise annonce'
+
 Par simplification, nous avons fait cela sur le titre de l'offre.
 
 *A partir de l'offre, nous pourrions scrapper l'annonce complète et passer le même algo pour trouver les mots clefs dnas l'annonce complète et pas seulement le titre de l'offre*
+
+## 3 ème étape : Notre BBD : MongoDB
+
+  1 - Création de BDD par jupyter   
+  2 - Importation manuel du CSV post-process via MongoDB Compas
+
+
+
+
 
   
