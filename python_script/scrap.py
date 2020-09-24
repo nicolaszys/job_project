@@ -138,4 +138,4 @@ browser.close()
 
 d = {'Entreprise':companies, 'Offre': title, 'Lieu': locations, 'URL':urls}
 df = pd.DataFrame(data=d)
-df.to_csv('../result_csv/scrap_indeed.csv',index=False)
+df.to_csv(f'../result_csv/scrap_indeed.csv',index=False)
