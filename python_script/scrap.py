@@ -8,6 +8,7 @@ from selenium.common.exceptions import NoSuchElementException
 import time
 import random
 import pandas as pd
+from datetime import date
 
 # DEMARRAGE DE SELENIUM
 browser = webdriver.Chrome()
@@ -138,4 +139,10 @@ browser.close()
 
 d = {'Entreprise':companies, 'Offre': title, 'Lieu': locations, 'URL':urls}
 df = pd.DataFrame(data=d)
-df.to_csv(f'../result_csv/scrap_indeed.csv',index=False)
+
+# Avoir la date d'aujourd'hui pour renommer le CSV
+today = date.today()
+
+df.to_csv(f'../result_csv/scrap_indeed_{today}.csv',index=False)
+
+
